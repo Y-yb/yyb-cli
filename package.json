@@ -1,13 +1,14 @@
 {
   "name": "yyb-cli",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "This is an attempt at CLI",
   "main": "index.js",
   "bin": {
-    "yyb": "src/bin/index.js"
+    "yyb": "bin/index.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "updatayyb": "npm publish && npm i -g yyb-cli && npm list -g"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/Y-yb/yyb-cli/issues"
   },
-  "homepage": "https://github.com/Y-yb/yyb-cli#readme"
+  "homepage": "https://github.com/Y-yb/yyb-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "figlet": "^1.5.2",
+    "git-pull-or-clone": "^2.0.2",
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.7"
+  }
 }
