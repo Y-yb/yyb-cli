@@ -1,0 +1,22 @@
+{
+  "name": "yyb-cli",
+  "version": "1.0.0",
+  "description": "This is an attempt at CLI",
+  "main": "index.js",
+  "bin": {
+    "yyb": "src/bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Y-yb/yyb-cli.git"
+  },
+  "author": "yyb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Y-yb/yyb-cli/issues"
+  },
+  "homepage": "https://github.com/Y-yb/yyb-cli#readme"
+}
