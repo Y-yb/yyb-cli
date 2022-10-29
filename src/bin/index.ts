@@ -5,7 +5,7 @@ const promisify = utile.promisify;
 const figlet = promisify(require("figlet"));
 const clear = require("clear");
 const inquirer = require("inquirer");
-const packageConfig = require('../package.json')
+const packageConfig = require('../../package.json')
 const { log } = require("../lib/api"); 
 
 const opt = {
@@ -26,18 +26,7 @@ const question = [
   }
 ];
 
-clear();
 
-log(
-  figlet.textSync("DOMESY!", {
-    horizontalLayout: "Isometric1",
-    verticalLayout: "default",
-    width: 80,
-    whitespaceBreak: true,
-  }), 'blue'
-)
-
-query();
 
 async function query(){
   const answer = await inquirer.prompt(question);
@@ -47,6 +36,22 @@ async function query(){
     log(`当前版本号：${packageConfig.version}`)
     return
   }
+  //@ts-ignore
   await require(`../lib/${opt[answer.operation]}`)();
   return
+}
+
+export function init (){
+  clear();
+
+  log(
+    figlet.textSync("YYB-CLI!", {
+      horizontalLayout: "full",
+      verticalLayout: "default",
+      width: 80,
+      whitespaceBreak: true,
+    }), 'blue'
+  )
+
+  query();
 }

@@ -1,14 +1,14 @@
 {
   "name": "yyb-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is an attempt at CLI",
   "main": "index.js",
   "bin": {
-    "yyb": "bin/index.ts"
+    "yyb": "lib/bin/index.ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "updatayyb": "npm publish && npm i -g yyb-cli && npm list -g"
+    "update": "npm publish && npm i -g yyb-cli && npm list -g"
   },
   "repository": {
     "type": "git",
