@@ -41,7 +41,7 @@ async function query(){
   return
 }
 
-export function init (){
+module.exports.init = () => {
   clear();
 
   log(

@@ -7,7 +7,7 @@
     "yyb": "lib/bin/index.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf lib && tsc",
     "update": "npm publish && npm i -g yyb-cli && npm list -g"
   },
   "repository": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "clear": "^0.1.0",
+    "commander": "^9.4.1",
     "figlet": "^1.5.2",
     "git-pull-or-clone": "^2.0.2",
     "inquirer": "^8.2.0"
